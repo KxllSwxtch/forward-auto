@@ -14,16 +14,16 @@ export default function FirstSection() {
 					<div className='col'>
 						<img style={{ width: '75%' }} src={logoUrl} alt='logo' />
 					</div>
-					<div className='col mt-4'>
+					<div className='col-sm mt-4'>
 						<ul class='nav nav-pills card-header-pills'>
 							<li class='nav-item'>
-								<Link class='nav-link' href='#'>
+								<Link class='nav-link' href='#aboutUs'>
 									About Us
 								</Link>
 							</li>
 							<li class='nav-item'>
-								<Link class='nav-link' href='#'>
-									Contacts
+								<Link class='nav-link' href='#contactUs'>
+									Contact Us
 								</Link>
 							</li>
 						</ul>
@@ -31,7 +31,7 @@ export default function FirstSection() {
 				</div>
 
 				<div className='row'>
-					<div className='col'>
+					<div className='col-sm'>
 						<a href='/'>
 							<Img src={shopOnlineButtonUrl} alt='' />
 						</a>
@@ -49,15 +49,6 @@ const Main = styled.div`
 	}
 `
 
-const Overlay = styled.div`
-	background-color: black;
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100vh;
-	z-index: 10;
-`
-
 const Img = styled.img`
 	display: block;
 	margin-top: 8%;
@@ -66,6 +57,11 @@ const Img = styled.img`
 	&:hover {
 		transform: scale(1.02);
 		transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+	}
+
+	@media screen and (max-width: 576px) {
+		margin-top: 10% !important;
+		margin-left: 5% !important;
 	}
 `
 
